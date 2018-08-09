@@ -1,0 +1,4 @@
+CREATE TABLE dz_user(
+    id SERIAL PRIMARY KEY,
+    user_ip VARCHAR (64) UNIQUE NOT NULL
+)

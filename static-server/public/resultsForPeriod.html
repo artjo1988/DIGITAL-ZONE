@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="/js/main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+</head>
+<body >
+
+<form>
+    <div class="form-row">
+        <div class="col-md-4 mb-3">
+            <label for="dateBegin">Дата начала периода</label>
+            <input type="text" class="form-control is-valid" id="dateBegin" placeholder="Дата"  required>
+            <div class="valid-feedback">
+                формат ( гггг / мм / дд )
+            </div>
+        </div>
+        <div class="col-md-4 mb-3">
+            <label for="timeBegin">Время начала периода</label>
+            <input type="text" class="form-control is-valid" id="timeBegin" placeholder="Время"  required>
+            <div class="valid-feedback">
+                формат ( чч : мм : сс )
+            </div>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="col-md-4 mb-3">
+            <label for="dateEnd">Дата окончания периода</label>
+            <input type="text" class="form-control is-valid" id="dateEnd" placeholder="Дата"  required>
+            <div class="valid-feedback">
+                формат ( гггг / мм / дд )
+            </div>
+        </div>
+        <div class="col-md-4 mb-3">
+            <label for="timeEnd">Время окончания периода</label>
+            <input type="text" class="form-control is-valid" id="timeEnd" placeholder="Время"  required>
+            <div class="valid-feedback">
+                формат ( чч : мм : сс )
+            </div>
+        </div>
+    </div>
+    <button onclick="resultsForPeriod(document.getElementById('dateBegin').value,
+                                      document.getElementById('timeBegin').value,
+                                      document.getElementById('dateEnd').value,
+                                      document.getElementById('timeEnd').value)" class="btn btn-primary" type="button">Получить результат</button>
+</form>
+
+    <div class="input-group mb-3" style="margin-top: 20px;">
+        <div class="input-group-prepend">
+            <span class="input-group-text" style="width: 500px" >Общее количество посещений за указанный период</span>
+        </div>
+        <input id="totalCountForPeriod" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+    </div>
+    <div class="input-group mb-3" >
+        <div class="input-group-prepend">
+            <span class="input-group-text" style="width: 500px" >Количество уникальных пользователей за указанный период</span>
+        </div>
+        <input id="uniqueCountForPeriod" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+    </div>
+    <div class="input-group mb-3" >
+        <div class="input-group-prepend">
+            <span class="input-group-text" style="width: 500px" >Количество постоянных пользователей за указанный период</span>
+        </div>
+        <input id="regularCountForPeriod" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+    </div>
+
+
+</body>
+</html>

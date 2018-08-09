@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="/js/main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+
+<button type="button" onclick="results()" class="btn btn-primary btn-lg btn-block">Получить результат на первое задание</button>
+
+<div class="input-group mb-3" style="margin-top: 20px;">
+    <div class="input-group-prepend">
+        <span class="input-group-text" style="width: 450px" >Общее количество посещений за текущие сутки</span>
+    </div>
+    <input id="totalCount" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+</div>
+<div class="input-group mb-3" >
+    <div class="input-group-prepend">
+        <span class="input-group-text" style="width: 450px" >Количество уникальных пользователей за текущие сутки</span>
+    </div>
+    <input id="uniqueCount" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+</div>
+
+</body>
+</html>
