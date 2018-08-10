@@ -22,6 +22,7 @@ import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.StringTokenizer;
 
 @Controller
 public class StatisticController {
@@ -39,20 +40,13 @@ public class StatisticController {
     @GetMapping("/fix")
     public ResponseEntity<Object> getHello(HttpServletRequest request, String url){
         //получение IP-адреса клиента
-        String userIp = request.getRemoteAddr();
-
-        //если будемполучать некорректный ip,
-        //то можно воспользоваться закомментированным блоком
-
-        /*
-        String userIp = null;
+        String userIp = request.getHeader("X-Forwarded-For");;
         if (request.getHeader("X-Forwarded-For") == null) {
             userIp = request.getRemoteAddr();
         }
         else {
-            userIp = new StringTokenizer(xForwardedForHeader, ",").nextToken().trim();
+            userIp = new StringTokenizer(userIp, ",").nextToken().trim();
         }
-        */
 
         //время запроса
         LocalDateTime time= LocalDateTime.now();
